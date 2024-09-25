@@ -21,7 +21,7 @@
 
 .card {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
+    position: fixed;
     left: 30%;
     top: 37%;    
     width: 500px;
