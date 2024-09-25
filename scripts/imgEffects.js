@@ -131,6 +131,7 @@ function openDiv(nameDiv) {
 function closeDiv(nameDiv) {
     document.querySelector(nameDiv).style.display = "none";
     document.querySelector(".brief").style.zIndex = "2";
+    document.getElementById('centralImage').style.display = "none";
 }
 
 function defineButtonnsEvents () {
