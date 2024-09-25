@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnipro Sity</title>
+    <link rel="icon" href="images/logo_back/dnipro_logo_31.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/imgEffects.css"> <!-- Linking external CSS for images effects -->
+    <link rel="stylesheet" href="styles/texteffects.css">
+    <link rel="stylesheet" href="styles/card.css">
+</head>
+
+<body>
+    <p id="testing"></p>
+
+    <!-- Wrapper for image to enable Flexbox centering -->
+    <div class="image-wrapper">
+        <div id="centralImage" class="image-container"></div>
+    </div>
+
+    <div class="card" id="card">
+        <button class="close_button" id="closeCard">X</button>
+        <img class="avatar" id="child01" src="images/software_engineers_role.jpg">
+        <div id="child02" onmouseover="cancelShuffle()">
+            <h3>Stanislav Starishko</h3>
+            <p>Full Stack Developer</p>
+            <h4>Glasgow, UK</h4>
+        </div>
+    </div>
+
+    <header>
+        <div class="header_container">
+            <div class="text_container">
+                <div class="text_head_left">
+                    <h1>
+                        Visit
+                    </h1>
+                </div>
+                <div class="text_head_right">
+                    <h1>
+                        Dnipro
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="brief" id="brief">
+        <h2 class="text_moving">
+            A little bit about Dnipro
+        </h2>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="container_left">
+                <div class="wrapper_buttons">
+                    <button class="buttons_left" id="wiki">
+                        Wiki
+                    </button>
+                    <button class="buttons" id="cityHistory">
+                        History
+                    </button>
+                </div>
+            </div>
+            <div class="container_center">
+                <div class="wrapper_buttons">
+                    <button class="buttons_center" id="topFacts">
+                        10 Top Facts
+                    </button>
+                </div>
+            </div>
+            <div class="container_right">
+                <div class="wrapper_buttons">
+                    <button class="buttons_right" id="aboutMe">
+                        Your guide was
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © Stanislav Starishko - 2024
+        </div>
+    </footer>
+
+    <!-- Ordered list with items -->
+    <ol class="effect-list">
+        <button class="close_button" id="closeImgEffects">X</button>
+        <li id="imageEffect01">
+            <p class="text">The first building built in Dnipro
+                is the "Potemkin Palace" in 1790, now the "Students'
+                Palace"</p>
+        </li>
+        <li id="imageEffect02">
+            <p class="text">There is no specific date for the City Day
+                in Dnipro. It is celebrated on the second
+                Saturday of September</p>
+        </li>
+        <li id="imageEffect03">
+            <p class="text">Dnipro has the largest Embankment in Europe - 23 km</p>
+        </li>
+        <li id="imageEffect04">
+            <p class="text">Zenit missiles are manufactured in Dnipro,
+                which still have no analogues in the whole world
+            </p>
+        </li>
+        <li id="imageEffect05">
+            <p class="text">The world's largest Jewish centre "Menorah"
+                is located in Dnipro</p>
+        </li>
+        <li id="imageEffect06">
+            <p class="text">The oldest and largest collection of "Stone Women"
+                is located in the Dnipro Historical Museum</p>
+        </li>
+        <li id="imageEffect07">
+            <p class="text">The first reinforced concrete bridge
+                in the world and the largest arch bridge in Europe
+                "Merefo-Khersonsky" is located in Dnipro</p>
+        </li>
+        <li id="imageEffect08">
+            <p class="text">Dnipro metro is the smallest in Europe,
+                6 stations, line length 7.8 km</p>
+        </li>
+        <li id="imageEffect09">
+            <p class="text">The longest residential building in Ukraine
+                is the nine-storey "Chinese Wall" on Heroiv Avenue</p>
+        </li>
+        <li id="imageEffect10">
+            <p class="text">The tallest building in Dnipro
+                is the "Towers" at 123 metres</p>
+        </li>
+    </ol>
+
+    <script src="scripts/imgEffects.js"></script> <!-- Linking external JS -->
+</body>
+
+</html>

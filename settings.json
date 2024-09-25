@@ -1,0 +1,28 @@
+{
+    "EffectColors": {
+        "ActiveElEffect": "#f72585",
+        "NotActiveElEffect": "#03045e"
+    },
+    "imgEffects": {
+        "path": "images/imgEffects/",
+        "fixedHeight": 350,
+        "files": {
+            "01": "potemkinPalace.jpg",
+            "02": "dniproDay.webp",
+            "03": "largestEmbankment.jfif",
+            "04": "zenitMissiles.jpg",
+            "05": "menora.jpg",
+            "06": "stoneWomen.jfif",
+            "07": "merefoHersonskiy.jpg",
+            "08": "metro.jpg",
+            "09": "chineseWall.jfif",
+            "10": "bashni.jpg"
+        },
+        "effects": {
+            "0": "rotate",
+            "1": "explosion",
+            "2": "flash"
+        }
+    }
+}
+

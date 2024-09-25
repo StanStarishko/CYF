@@ -1,0 +1,179 @@
+@font-face {
+   font-family: 'DniproCity';
+   src: url('../fonts/DniproCity-Bold.otf') format('opentype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'DniproCity';
+   src: url('../fonts/DniproCity-Regular.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 117, 201);
+    font-family: 'DniproCity', sans-serif;
+    font-weight: normal; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'DniproCity', sans-serif;
+   font-weight: bold;
+}
+
+ header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/logo_back/Dnipro_prapor.png'), 
+            url('../images/logo_back/city_river.avif'), 
+            url('../images/logo_back/dnipro_01.jpg');
+    background-size: 20% 100%, 40% 100%, 20% 100%;
+    background-position: left bottom, center bottom, right bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Prevent images from repeating */
+ }
+
+ .header_container {
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   margin: auto;
+   height: 100%;
+   width: 60%;
+ }
+
+.text_container {
+   padding: 0;
+   height: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+[class^="text_head"] {
+   width: 12%;
+   height: 40%;
+   color: yellow;
+   text-shadow: 3px 4px 3px black;
+}
+
+.text_head_left {
+   position: absolute;
+   left: 22.5%;
+}
+
+.text_head_right {
+   position: absolute;
+   text-align: right;
+   right: 21.5%;
+}
+
+.brief {
+   position: fixed;
+   top: 30%;
+   color: black;
+   width: 100%;
+   text-align: center;
+   z-index: 2;
+ }
+
+ .footer_container {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/logo_back/dnipro_logo_11.png'), 
+            url('../images/logo_back/dnipro_logo_28.png'), 
+            url('../images/logo_back/dnipro_logo_27.png');
+    background-size: 34% 100%, 34% 100%, 34% 100%; /* Each image takes up 34% of the width and 100% of the height */
+    background-position: left bottom, center bottom, right bottom; /* First image at the top, second at the bottom */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Prevent images from repeating */
+    display: flex;
+ }
+ 
+ [class^="container_"] {
+   /*border: 2px solid red;*/
+   width: 34%;
+   height: 100%;
+}
+
+.wrapper_buttons {
+   display: flex;
+   justify-content: center;
+}
+
+ [class^="buttons"] {
+   margin-left: 4px;
+   margin-right: 4px;
+   margin-top: 5px;
+   background-color: rgb(0, 117, 201);
+   background-image: none;
+   border: none;
+   padding-top: 8px;
+   padding-bottom: 8px;
+   padding-left: 16px;
+   padding-right: 16px;
+   border-radius: 16px;
+   font-weight: bold;
+   color: yellow;
+   cursor: pointer;
+   box-shadow: 2px 2px 5px black;
+   transition: box-shadow 0.2s ease, background-color 0.2s ease, background-image 0.2s ease;
+}
+
+.buttons_center {
+   background-image: url('../images/logo_back/dnipro_logo_28.png');
+   background-size: cover;
+   /*transition: background-image 0.3s ease;*/
+}
+
+.buttons_right {
+   background-image: url('../images/logo_back/dnipro_logo_27.png');
+   background-size: initial;
+   /*transition: background-image 0.3s ease;*/
+}
+
+[class^="buttons"]:hover {
+   box-shadow: 4px 4px 10px blue;
+   background-size: contain;
+   background-color: rgb(57, 153, 222);
+}
+
+/* Close button in the top-right corner */
+.close_button {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: red;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   cursor: pointer;
+   font-weight: blod;
+}
+
+.close_button:hover {
+   background-color: darkred;
+}
+
+ .copyright {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding-bottom: 3px;
+   font-weight: bold;
+   text-align: center;
+   color: darkblue;
+   text-shadow: 3px 4px 3px yellow;
+ }
