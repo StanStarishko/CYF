@@ -120,6 +120,7 @@ function toggleImageContainer() {
 function openDiv(nameDiv) {
     
     if (nameDiv === ".effect-list") {
+        document.querySelector(".effect_list_wrapper").style.display = "flex";
         document.querySelector(nameDiv).style.display = "block";
         document.querySelector(nameDiv).style.color = settings.EffectColors.NotActiveElEffect; 
     } else {
@@ -129,6 +130,7 @@ function openDiv(nameDiv) {
 }
 
 function closeDiv(nameDiv) {
+    document.querySelector(".effect_list_wrapper").style.display = "none";
     document.querySelector(nameDiv).style.display = "none";
     document.querySelector(".brief").style.zIndex = "2";
     document.getElementById('centralImage').style.display = "none";

@@ -18,6 +18,7 @@ body {
     background-color: rgb(0, 117, 201);
     font-family: 'DniproCity', sans-serif;
     font-weight: normal; 
+    z-index: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -103,7 +104,6 @@ h1, h2, h3, h4, h5, h6 {
  }
  
  [class^="container_"] {
-   /*border: 2px solid red;*/
    width: 34%;
    height: 100%;
 }
@@ -153,14 +153,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Close button in the top-right corner */
 .close_button {
    position: absolute;
-   top: 10px;
-   right: 10px;
+   top: 1px;
+   right: 1px;
    background-color: red;
    color: white;
    border: none;
    padding: 5px 10px;
    cursor: pointer;
-   font-weight: blod;
+   font-weight: bold;
 }
 
 .close_button:hover {

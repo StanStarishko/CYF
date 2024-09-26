@@ -1,3 +1,4 @@
+
 /* Styles for the container holding the image */
 .image-wrapper {
     position: fixed;
@@ -25,19 +26,30 @@
 }
 
 /* List effects container styling */
+.effect_list_wrapper {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
 .effect-list {
-    /*display: none;*/
+    position: fixed;
     list-style-type: decimal;
     margin: 30px;
-    display: none;
-    position: fixed;
-    top: 8%;
-    left: 9%;
-    width: 75%; /* 15% smaller than the full screen */
-    height: 70%; /* 15% smaller than the full screen */
+    display: block;
+    width: 75vw; /* 25% smaller than the full screen */
+    height: 70vh; /* 30% smaller than the full screen */
     padding-top: 2%;
+    padding-bottom: 2%;
     /* Common gradient background for the image container and list container */
-    background-color: rgba(240, 248, 255, 0.95);
     border-radius: 10px;
     overflow: auto;
     background: linear-gradient(to bottom, #e1f5fe, #0288d1); /* Light to dark gradient */
