@@ -88,8 +88,19 @@ async function applyEffectForElement(element) {
     }
 }
 
+function preventZoom() {
+    document.body.style.zoom = "100%";
+}
+
 // Function to set up event listeners for the elements
 function setupEventListeners() {
+    window.addEventListener('resize', preventZoom);
+    window.addEventListener('wheel', function(event) {
+        if (event.ctrlKey) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+
     document.querySelectorAll('.effect-list li').forEach(item => {
         // Attach mouseover event handler
         item.addEventListener('mouseover', () => {
@@ -118,22 +129,28 @@ function toggleImageContainer() {
 }
 
 function openDiv(nameDiv) {
-    
     if (nameDiv === ".effect-list") {
         document.querySelector(".effect_list_wrapper").style.display = "flex";
         document.querySelector(nameDiv).style.display = "block";
         document.querySelector(nameDiv).style.color = settings.EffectColors.NotActiveElEffect; 
     } else {
-        document.querySelector(nameDiv).style.display = "flex";
+        document.querySelectorAll("[class^='card']").forEach(function(element) {
+            element.style.display = "flex";
+        });
     }
     document.querySelector(".brief").style.zIndex = "1";
 }
 
 function closeDiv(nameDiv) {
-    document.querySelector(".effect_list_wrapper").style.display = "none";
-    document.querySelector(nameDiv).style.display = "none";
+    if (nameDiv === ".effect-list") {
+        document.querySelector(".effect_list_wrapper").style.display = "none";
+        document.getElementById('centralImage').style.display = "none";
+    } else {
+        document.querySelectorAll("[class^='card']").forEach(function(element) {
+            element.style.display = "none";
+        });
+    }
     document.querySelector(".brief").style.zIndex = "2";
-    document.getElementById('centralImage').style.display = "none";
 }
 
 function defineButtonnsEvents () {
@@ -167,6 +184,26 @@ function defineButtonnsEvents () {
     });
 }
 
+function getScreenResolution() {
+    const width = window.screen.width;
+    const height = window.screen.height;
+    const aspectRatio = width / height;
+
+    if (width > 1280) {
+        document.querySelectorAll("[class^='buttons']").forEach(function(element) {
+            //element.style.fontSize = "2lh";
+            element.style.borderRadius = "32px";
+        });
+        document.body.style.fontSize = "1.5lh";
+        //document.querySelector(".effect-list").style.width = "90%"
+        //document.querySelector(".effect-list").style.height = "85%"
+    }
+
+    //console.log("Current zoom level: " + window.devicePixelRatio * 100 + "%");
+    //console.log(`Screen resolution: ${width}x${height}`);
+    //console.log(`Aspect ratio: ${aspectRatio.toFixed(2)}`);
+}
+
 // Load settings from settings.json file
 fetch('settings.json')
     .then(response => response.json())
@@ -174,5 +211,6 @@ fetch('settings.json')
         settings = data; // Store the settings in a global variable
         setupEventListeners(); // Set up event listeners after loading the settings
         defineButtonnsEvents ();
+        getScreenResolution()
     })
     .catch(error => console.error('Error loading settings:', error));

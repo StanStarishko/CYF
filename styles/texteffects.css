@@ -1,9 +1,9 @@
 .text_moving {
-    width: 50%;
+    width: 40%;
     display: inline-block; /* To make the animation work correctly */
     overflow: hidden; /* Hide overflowing text */
     white-space: nowrap; /* Prevent text from wrapping */
-    animation: slide 10s linear infinite, colorShift 5s linear infinite; /* Duration and type of animation */
+    animation: slide 9s linear infinite, colorShift 3s linear infinite; /* Duration and type of animation */
 }
 
 @keyframes slide {
@@ -23,7 +23,7 @@
         transform: translateX(0); /* Stops in the centre */
     }
     50% {
-        transform: translateX(100%); /* Goes to the right */
+        transform: translateX(75%); /* Goes to the right */
     }
     70% {
         transform: translateX(0); /* Stops in the centre */
@@ -44,12 +44,22 @@
 
 /* Color animation */
 @keyframes colorShift {
-    0% { color: #9B2C30; }
-    16.66% { color: #432818; }
+    0% { color: rgb(13, 230, 13); }
+    16.66% { color: rgba(247, 11, 223, 0.975); }
     33.33% { color: #fde12d; }
-    50% { color: #9B2C30; }
-    66.66% { color: #432818; }
+    50% { color: rgb(13, 230, 13); }
+    66.66% { color: rgba(247, 11, 223, 0.975); }
     83.33% { color: #fde12d; }
-    100% { color: #9B2C30; }
+    100% { color: rgb(13, 230, 13); }
 }
 
+/* Adaptive design */
+@media (max-width: 1024px) {
+    .text_moving {
+        width: 100%;
+        display: inline-block; /* To make the animation work correctly */
+        overflow: hidden; /* Hide overflowing text */
+        white-space: nowrap; /* Prevent text from wrapping */
+        animation: colorShift 3s linear infinite; /* Duration and type of animation */
+    }    
+}
