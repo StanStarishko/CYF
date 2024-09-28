@@ -23,7 +23,7 @@
 }
 
 .avatar {
-    height: 90px;
+    height: calc(80%);
     width: auto;
     border-radius: 20px;
     transition: transform 5s ease-in-out;
