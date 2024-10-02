@@ -6,6 +6,7 @@
      - ### What might be interesting:
        - #### Click the buttons, especially *"10 Top Facts"* and *"Your guide was"*
          - #### *"10 Top Facts"*: just move the mouse over to any item list. If you are on the phone, you could click on different items in the list.
+         - #### You can *change the "behavior"* of the effects of the "10 Top Facts" button by *editing [settings.json](https://github.com/StanStarishko/CYF-ITD-HomeTown/blob/main/settings.json)*
          - #### *"Your guide was"*: try hovering the mouse over the avatar or clicking on it
   
 - ## *Responsive design* implemented, adapts to the *device resolutions* 
